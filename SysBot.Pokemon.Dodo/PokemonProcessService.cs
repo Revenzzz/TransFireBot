@@ -96,7 +96,7 @@ namespace SysBot.Pokemon.Dodo
                 if (!FileTradeHelper<TP>.IsValidFileSize(messageBodyFile.Size ?? 0) || !FileTradeHelper<TP>.IsValidFileName(messageBodyFile.Name))
                 {
                     ProcessWithdraw(eventBody.MessageId);
-                    DodoBot<TP>.SendChannelMessage("非法文件", eventBody.ChannelId);
+                    DodoBot<TP>.SendChannelMessage("想交换？探侦匕首已掷出！🤖👉🔪\n🤖\n非法文件，一概禁止！\U0001f91c⚡💍⚡\U0001f91b\n🤖\n你！已被！剥夺力量！\U0001f91c⚡💍⚡\U0001f91b\n爬过来受死！🖐🐍\U0001f91a\n看招🙋✂✂✂\n你无路可逃！💘💘💘💘", eventBody.ChannelId);
                     MemberMuteAdd(eventBody.IslandSourceId, eventBody.DodoSourceId, 600, "使用非法文件,关你几分钟小黑屋QAQ");
                     return;
                 }
