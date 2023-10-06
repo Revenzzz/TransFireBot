@@ -495,7 +495,7 @@ namespace SysBot.Pokemon.Helpers
                     LogUtil.LogInfo($"非法原因:\n{la.Report()}", nameof(PokemonTradeHelper<T>));
                 }
                 LogUtil.LogInfo($"pkm type:{pkm.GetType()}, T:{typeof(T)}", nameof(PokemonTradeHelper<T>));
-                var reason = "我没办法创造非法宝可梦";
+                var reason = "想交换？探侦匕首已掷出！🤖👉🔪\n                                          🤖\n非法操作，一概禁止！\U0001f91c⚡💍⚡\U0001f91b\n                                         🤖\n你！已被！剥夺力量！\U0001f91c⚡💍⚡\U0001f91b\n爬过来受死！🖐🐍\U0001f91a\n看招🙋✂✂✂\n你无路可逃！💘💘💘💘​";
                 msg = $"{reason}";
             }
             catch (Exception ex)
