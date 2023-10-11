@@ -185,6 +185,9 @@ namespace SysBot.Pokemon.Dodo
 
         public static void SendChannelCardMessage(string message, string channelId, string pokeurl,string itemurl, string ballurl,string teraurl, string teraoriginalurl, string shinyurl, string movetypeurl1, string movetypeurl2, string movetypeurl3, string movetypeurl4)
         {
+            string[] colors = { "black", "purple", "blue", "indigo", "green", "yellow", "orange", "red" };
+            string color = colors[new Random().Next(0, 8)];
+
             string mes = "";
             if (string.IsNullOrEmpty(message)) message= "None";
             string[] pmsgLines = message.Split('\n');
@@ -197,7 +200,7 @@ namespace SysBot.Pokemon.Dodo
             string[] part = pmsgLines[10].Split(',');
             for (int i = 0; i < part.Length; i++)
                 part[i] = part[i].Replace(":", "\n");
-
+            
             OpenApiService.SetChannelMessageSend(new SetChannelMessageSendInput<MessageBodyCard>
             {
                 ChannelId = channelId,
@@ -207,7 +210,7 @@ namespace SysBot.Pokemon.Dodo
                     Card = new MessageModelCard
                     {
                         Type = "card",
-                        Theme = "grey",
+                        Theme = color,
                         //Title = "这是你要的宝可梦：",
                         Components = new List<object>
                         {
@@ -463,6 +466,9 @@ namespace SysBot.Pokemon.Dodo
         }
         public static void SendChannelEggCardMessage(string title, string message, string channelId, string pokeurl,string ballurl,string shinyurl,string shinyinfo)
         {
+            string[] colors = { "black", "purple", "blue", "indigo", "green", "yellow", "orange", "red" };
+            string color = colors[new Random().Next(0, 8)];
+
             string mes = "";
             if (string.IsNullOrEmpty(message)) message = "None";
             if (string.IsNullOrEmpty(title)) title = "None";
@@ -472,6 +478,7 @@ namespace SysBot.Pokemon.Dodo
             for (int i = 0; i < parts.Length; i++)
                 parts[i] = parts[i].Replace(":", "\n");
             mes = pmsgLines[0] + "\n" + pmsgLines[1] + "\n" + pmsgLines[2] + "\n" + pmsgLines[3] + "\n" +  shinyinfo;
+
             OpenApiService.SetChannelMessageSend(new SetChannelMessageSendInput<MessageBodyCard>
             {
                 ChannelId = channelId,
@@ -481,7 +488,7 @@ namespace SysBot.Pokemon.Dodo
                     Card = new MessageModelCard
                     {
                         Type = "card",
-                        Theme = "grey",
+                        Theme = color,
                         Title = title,
                         Components = new List<object>
                         {
@@ -586,6 +593,9 @@ namespace SysBot.Pokemon.Dodo
         }
         public static void SendChannelCardBatchMessage(string message, string channelId, string pokeurl, string itemurl, string ballurl, string shinyurl)
         {
+            string[] colors = { "black", "purple", "blue", "indigo", "green", "yellow", "orange", "red" };
+            string color = colors[new Random().Next(0, 8)];
+
             OpenApiService.SetChannelMessageSend(new SetChannelMessageSendInput<MessageBodyCard>
             {
                 ChannelId = channelId,
@@ -595,7 +605,7 @@ namespace SysBot.Pokemon.Dodo
                     Card = new MessageModelCard
                     {
                         Type = "card",
-                        Theme = "grey",
+                        Theme = color,
                         Components = new List<object>
                         {
                             new
