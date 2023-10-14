@@ -214,6 +214,38 @@ namespace SysBot.Pokemon.Dodo
                 }
                     return;
             }
+            else if (content.Trim().StartsWith("道具"))
+            {
+                var r = content.Split(new char[] { '具', '个' });
+                int nums = int.Parse(r[1]);
+                DodoBot<TP>.SendChannelMessage($"{nums}个{r[2]}发货", eventBody.ChannelId);
+                string daoju = "";
+                for (int i = 0; i < nums; i++)
+                {
+                    if (i > 0)
+                        daoju += "+";
+                    daoju += $"伊布携带{r[2]}";
+
+                }
+                if (!VipRole && !BatchRole)
+                    DodoBot<TP>.SendChannelMessage("你没有批量权限", eventBody.ChannelId);
+                else
+                {
+                    if (VipRole)
+                    {
+                        DodoBot<TP>.SendChannelAtMessage(ulong.Parse(eventBody.DodoSourceId), "我从不向金钱低头，金主你先请！！", eventBody.ChannelId);
+                        ProcessWithdraw(eventBody.MessageId);
+                        new DodoHelper<TP>(ulong.Parse(eventBody.DodoSourceId), eventBody.Personal.NickName, eventBody.ChannelId, eventBody.IslandSourceId).StartTradeMultiChinesePs(daoju.Trim(), eventBody.DodoSourceId, true, Count); ;
+                        Count++;
+                    }
+                    else
+                    {
+                        ProcessWithdraw(eventBody.MessageId);
+                        new DodoHelper<TP>(ulong.Parse(eventBody.DodoSourceId), eventBody.Personal.NickName, eventBody.ChannelId, eventBody.IslandSourceId).StartTradeMultiChinesePs(daoju.Trim(), eventBody.DodoSourceId);
+                    }
+                }
+                return;
+            }
 
             else if (content.Contains("取消"))
             {               
