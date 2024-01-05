@@ -1,4 +1,14 @@
+ # 如果你喜欢我们的开发的传火BOT，欢迎打赏支持我们，最重要的还是要谢谢大家对本项目的支持。我们将一如既往地给大家带来更新
+![未标题-1](https://github.com/RYGUGU/TransFireBot/assets/50143694/c9d9ea58-9ef4-4334-9d98-da5d91b28eb3)
+#  赞助的金额会用来维持后期新版本开发更新还有域名服务器等维护
+----------
 # TransFireBot
+ ## 提示-Tip
+ #### 如果你任何疑问，请在issues板块提出或者请在QQ等社交软件上联系我，请不要在其他地方留言
+ ------
+ #### If you have any questions, please raise them in the issues section or contact me on social media, such as QQ. 
+ #### Don't leave comments elsewhere
+ ----------
  ## Declaration-声明
  ### 一切开发旨在学习，请勿用于非法用途
  
@@ -32,6 +42,7 @@
 - [Bilibili](#sysbotpokemonbilibili)
     + [Bilibili直播弹幕配送](#bilibili------)
     + [使用方法](#----)
+- [Thanks](#thanks)
 
 
 # SysBot.Pokemon.Dodo
@@ -56,14 +67,16 @@
 
 * Support [ALM-Showdown-Sets](https://github.com/architdate/PKHeX-Plugins/wiki/ALM-Showdown-Sets)
 * Support PK8 PB8 PA8 PK9 file upload
-* Support Customized Chinese to ALM-Showdown-Sets translation- Support 
-
+* Support Customized Chinese to ALM-Showdown-Sets translation- Support
+* Support Card Message and Picture Message
+* Support Batch Trade
 ----------
 
 * 支持使用 [ALM-Showdown-Sets](https://github.com/architdate/PKHeX-Plugins/wiki/ALM-Showdown-Sets) 进行交换
 * 支持 PK8、PB8、PA8、pk9 文件上传交换
 * 支持自定义的中文模版格式进行交换
-
+* 支持卡片消息和图片消息
+* 支持批量交换
 ----------
 
 
@@ -146,3 +159,18 @@
  
 
 ----------
+
+# Thanks
+
+## Microsoft
+
+感谢 [Microsoft](https://visualstudio.microsoft.com/) 对于项目提供的支持！这正是开源项目发展的动力！
+
+[![Microsoft](https://raw.githubusercontent.com/Haisyer/pic/2583814b88dbc367ee8bf15e24f2a5622cd2227e/pic/Microsoft_Visual_Studio_2022.svg)](https://visualstudio.microsoft.com/)
+
+## JetBrains 
+
+感谢 [JetBrains](https://www.jetbrains.com/) 对于项目提供的支持！这正是开源项目发展的动力！
+
+[![JetBrains](http://pic.dinky.org.cn/dinky/docs/zh-CN/thanks/jetbrains.svg)]([https://www.jetbrains.com/?from=dinky](https://visualstudio.microsoft.com/))
+
